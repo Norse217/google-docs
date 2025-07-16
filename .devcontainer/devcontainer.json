@@ -6,7 +6,7 @@
   "build": {
     "dockerfile": "Dockerfile",
     // Update 'VARIANT' to pick a Node version
-    "args": { "VARIANT": "22" }
+    "args": { "VARIANT": "30" }
   },
 
   // Install features. Type 'feature' in the VS Code command palette for a full list.
@@ -20,7 +20,7 @@
       // Set *default* container specific settings.json values on container create.
       "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
-        "cSpell.language": ",en",
+        "cSpell.language": "en",
         "git.autofetch": true
       },
       // Visual Studio Code extensions which help authoring for docs.github.com.
@@ -50,10 +50,10 @@
   },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [4000],
+  "forwardPorts": [8080],
 
   "portsAttributes": {
-    "4000": {
+    "8080": {
       "label": "Review"
     }
   },
@@ -68,7 +68,7 @@
   "remoteUser": "node",
 
   "hostRequirements": {
-    "memory": "16gb",
-    "cpus": "4"
+    "memory": "36gb",
+    "cpus": "8"
   }
 }
